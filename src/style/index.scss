@@ -1,3 +1,13 @@
 @import "variables";
 @import "mixins";
 @import "reboot";
+
+.header {
+  @include flex-layout(row, space-between, center);
+  padding: 20px 30px;
+  border-bottom: 2px solid $border-color;
+}
+
+.main {
+  @include flex-layout(row, center, center);
+}

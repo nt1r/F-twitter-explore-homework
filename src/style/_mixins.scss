@@ -2,3 +2,15 @@
   margin-top: 0;
   font-size: $font-size;
 }
+
+@mixin flex-layout(
+  $direction,
+  $justify-content: flex-start,
+  $align-items: flex-start,
+  $align-content: flex-start
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  align-content: $align-content;
+}
