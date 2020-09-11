@@ -8,6 +8,23 @@
   border-bottom: 2px solid $border-color;
 }
 
+.header-base-button {
+  border-radius: 50px;
+  width: 6em;
+  height: 2.5em;
+  border: 2px solid $primary-color;
+}
+
+.header-button-login {
+  @extend .header-base-button;
+  @include button-variant($primary-color, transparent);
+}
+
+.header-button-register {
+  @extend .header-base-button;
+  @include button-variant($white, $primary-color);
+}
+
 .main {
   @include flex-layout(row, center, center);
 }
