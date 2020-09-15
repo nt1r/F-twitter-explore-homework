@@ -2,6 +2,7 @@
 @import "variables";
 @import "mixins";
 @import "reboot";
+//TODO feedback: 页面所有的scss都写在index.scss里面，应该抽取出_header.scss和_main.scss（Sass partial没有使用到）
 
 .header {
   @include flex-layout(row, space-between, center);
