@@ -1,3 +1,4 @@
+//TODO feedback 尝试把@import换成@use,可以去了解一下二者的区别
 @import "variables";
 @import "mixins";
 @import "reboot";
@@ -8,6 +9,7 @@
   border-bottom: 2px solid $border-color;
 }
 
+//TODO feedback: 需要把公用的extent的class抽到一个文件里，这样能让代码的可阅读性，维护性更好
 .button-base {
   border-radius: 50px;
   width: 6em;
@@ -55,6 +57,7 @@
 
 .input-div {
   @extend .section-div;
+  //TODO feedback: input-div为什么需要Felx?我试了一下，这里不@include flex-layout，对页面样式没有任何影响
   @include flex-layout(column, center, flex-start);
 }
 
@@ -75,6 +78,9 @@
   text-decoration: none;
   color: $primary-color;
 }
+//TODO feedback: 对比一下.section-base-button和.header-base-button,他们二者就是width不一样。
+// 所以可以尝试把这个width加入 button-variant作为参数，这样页面上的4个button就都可以 @extent .button-base了。
+// 这样.section-base-button和.header-base-button就都不需要了
 
 .section-base-button {
   @extend .button-base;

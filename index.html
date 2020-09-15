@@ -9,6 +9,7 @@
 </head>
 <body>
 <header class="header">
+<!--  TODO feedback: class的名字叫做'logo' 就已经能表明它的业务逻辑了，不用表明它是一个text-->
   <h1 class="logo-text">Twitter</h1>
   <nav>
     <button class="header-button-login">登录</button>
@@ -16,8 +17,12 @@
   </nav>
 </header>
 <main class="main">
+    <!--    TODO feedback: 这里应该使用<form>标签，因为它是一个form,而不应该用<section>-->
   <section class="login-section">
+<!--    TODO feedback: 这里使用h2标签不合适，因为它并不是作为一个页面的heading,他只是这个form表单里比较重要的文字，我们使用P标签，然后用css把它加粗就行了-->
     <h2 class="section-title">查看世界上正在发生的事情</h2>
+    <!--    TODO feedback: css class的命名需要反映业务逻辑，所以这里的"input-div"不表意-->
+    <!--    TODO feedback: 给label和input包一层div，我想你是为了换行，但是这种做法是不对的哈。正确的做法是吧input放在label里，然后给label加样式：display: block-->
     <div class="input-div">
       <label for="username" class="input-label">电话、邮箱地址或用户名</label>
       <input type="text" id="username" class="input"/>
@@ -26,9 +31,13 @@
       <label for="password" class="input-label">密码</label>
       <input type="password" id="password" class="input"/>
     </div>
+    <!--    TODO feedback: 如果想要<a>具有block的表现可以给它添加display: block，不能通过给它套一层div来实现-->
+    <!--    TODO feedback: css class的命名需要反映业务逻辑，所以这里的"forgot-password-a"可以改为"forgot-password-link"-->
     <div class="section-div"><a href="" class="forgot-password-a">忘记密码？</a></div>
+    <!--    TODO feedback: 'section-button-login' 可改为 'login-button'-->
     <button class="section-button-login">登录</button>
     <p>或</p>
+    <!--    TODO feedback: 'section-button-login' 可改为 'register-button'-->
     <button class="section-button-register">注册</button>
   </section>
 </main>
